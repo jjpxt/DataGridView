@@ -32,7 +32,6 @@ const dgv = (configdgv) => {
 
         const c5 = document.createElement("div");
         c5.setAttribute("class", "coluna c5");
-        c5.innerHTML = "D E V";
         dgvLinha.appendChild(c5);
 
         const imgDelete = document.createElement("img");
