@@ -22,5 +22,11 @@
         "produto":"Impressora",
         "marca":"HP",
         "modelo":"P1005"
+    },
+    {
+        "id":"05",
+        "produto":"Drone",
+        "marca":"DJI",
+        "modelo":"Mini 3 Pro"
     }
 ]

@@ -4,3 +4,59 @@
     margin: 0px;
     box-sizing: border-box;
 }
+.dgv{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
+}
+.dgvTitulos{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: row;
+    background-color: #138;
+    color: #fff;
+    border-radius: 5px 5px 0px 0px;
+}
+.dgvTitulos div, .dgvLinha div{
+    padding: 5px;
+}
+
+.dgvDados{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.dgvLinha{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: row;
+}
+
+.dgvLinha:nth-child(odd){
+    background-color: #aaaaaab4;
+}
+.dgvLinha:nth-child(even){
+    background-color: #ddd;
+}
+.dgvLinha:hover{
+    background-color: rgb(0, 77, 136) !important;
+    /* cursor: pointer; */
+    color: #fff;
+}
+
+.c1{
+    width: 50px;
+}
+
+.c2, .c3, .c4{
+    width: 150px;
+}
+
+.c5{
+    width: 100px;
+}
