@@ -30,9 +30,9 @@ const inicializarModal = () => {
   };
   // Envio do formulário
   form.onsubmit = (e) => {
-    e.preventDefault(); // Impede o envio padrão do formulário
-    adicionarProduto(); // Chama função para adicionar produto
-    modal.style.display = "none"; // Fecha o modal
+    e.preventDefault();
+    adicionarProduto();
+    modal.style.display = "none";
   };
 };
 
@@ -73,7 +73,7 @@ const adicionarProduto = () => {
   }
 };
 
-// Função de renderização (mantida do código anterior)
+// Função de renderização
 const dgv = (configdgv = { idDestino: "dgvDados" }) => {
   inicializarProdutos();
   const dgvDados = document.getElementById(configdgv.idDestino);
