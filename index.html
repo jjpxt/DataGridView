@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Cadastro de Produtos</title>
   </head>
   <body>
+    <button id="btnAbrirModal" class="btn-adicionar">Adicionar Produto</button>
+
     <div id="dgvProdutos" class="dgv">
       <div id="dgvTitulos" class="dgvTitulos">
         <div class="c1">ID</div>
@@ -17,6 +19,33 @@
       </div>
       <div id="dgvDados" class="dgvDados"></div>
     </div>
+
+    <!-- Modal de Adicionar Produto -->
+    <div id="modalProduto" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar">&times;</span>
+        <h2>Adicionar Novo Produto</h2>
+        <form id="formProduto">
+          <div class="form-grupo">
+            <label for="inputProduto">Produto</label>
+            <input type="text" id="inputProduto" required />
+          </div>
+          <div class="form-grupo">
+            <label for="inputMarca">Marca</label>
+            <input type="text" id="inputMarca" required />
+          </div>
+          <div class="form-grupo">
+            <label for="inputModelo">Modelo</label>
+            <input type="text" id="inputModelo" required />
+          </div>
+          <div class="form-acoes">
+            <button type="submit" class="btn-salvar">Salvar</button>
+            <button type="button" class="btn-cancelar">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script src="app.js" type="module"></script>
   </body>
 </html>
