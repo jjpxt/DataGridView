@@ -69,7 +69,7 @@ const adicionarProduto = () => {
     produtos.push(novoProduto);
     localStorage.setItem("produtos", JSON.stringify(produtos));
 
-    dgv(); // Atualizar tabela
+    dgv();
   }
 };
 
@@ -129,4 +129,64 @@ const dgv = (configdgv = { idDestino: "dgvDados" }) => {
 
     dgvDados.appendChild(dgvLinha);
   });
+};
+
+// Funções de exclusão, edição e visualização
+const excluirProduto = (id) => {
+  const confirmacao = confirm("Tem certeza que deseja excluir este produto?");
+  if (confirmacao) {
+    let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+    produtos = produtos.filter((p) => p.id !== id);
+    localStorage.setItem("produtos", JSON.stringify(produtos));
+    dgv();
+  }
+};
+
+const editarProduto = (produto) => {
+  const novoProduto = prompt("Digite o novo nome do produto:", produto.produto);
+  const novaMarca = prompt("Digite a nova marca:", produto.marca);
+  const novoModelo = prompt("Digite o novo modelo:", produto.modelo);
+
+  if (novoProduto && novaMarca && novoModelo) {
+    let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+    const index = produtos.findIndex((p) => p.id === produto.id);
+
+    if (index !== -1) {
+      produtos[index] = {
+        ...produtos[index],
+        produto: novoProduto,
+        marca: novaMarca,
+        modelo: novoModelo,
+      };
+
+      localStorage.setItem("produtos", JSON.stringify(produtos));
+      dgv();
+    }
+  }
+};
+
+const visualizarProduto = (produto) => {
+  alert(`
+    Detalhes do Produto
+    ID: ${produto.id}
+    Produto: ${produto.produto}
+    Marca: ${produto.marca}
+    Modelo: ${produto.modelo}
+  `);
+};
+
+// Inicialização
+document.addEventListener("DOMContentLoaded", () => {
+  inicializarProdutos();
+  inicializarModal();
+  dgv();
+});
+
+// Exportar funções
+export {
+  dgv,
+  adicionarProduto,
+  excluirProduto,
+  editarProduto,
+  visualizarProduto,
 };

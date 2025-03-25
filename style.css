@@ -1,17 +1,29 @@
-*{
+* {
     border: none;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
-.dgv{
+
+body {
+    display: flex;
+    
+    height: 100vh; /* Altura total da janela */
+    
+    background-color: #f5f5f5;
+}
+
+
+
+.dgv {
     display: flex;
     justify-content: flex-start;
     align-self: flex-start;
     flex-direction: column;
     margin: 35px;
 }
-.dgvTitulos{
+
+.dgvTitulos {
     display: flex;
     justify-content: flex-start;
     align-self: flex-start;
@@ -20,56 +32,58 @@
     color: #fff;
     border-radius: 5px 5px 0px 0px;
 }
-.dgvTitulos div, .dgvLinha div{
+
+.dgvTitulos div, .dgvLinha div {
     padding: 5px;
 }
 
-.dgvDados{
+.dgvDados {
     display: flex;
     justify-content: flex-start;
     align-self: flex-start;
     flex-direction: column;
 }
 
-.dgvLinha{
+.dgvLinha {
     display: flex;
     justify-content: flex-start;
     align-self: flex-start;
     flex-direction: row;
-
 }
 
-.dgvLinha:nth-child(odd){
+.dgvLinha:nth-child(odd) {
     background-color: #aaaaaab4;
 }
-.dgvLinha:nth-child(even){
+
+.dgvLinha:nth-child(even) {
     background-color: #ddd;
 }
-.dgvLinha:hover{
+
+.dgvLinha:hover {
     background-color: rgb(0, 77, 136) !important;
-    /* cursor: pointer; */
     color: #fff;
 }
 
-.coluna{
+.coluna {
     display: flex;
-    justify-content:flex-start ;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.c1{
+.c1 {
     width: 50px;
 }
 
-.c2, .c3, .c4{
+.c2, .c3, .c4 {
     width: 150px;
 }
-.c5{
+
+.c5 {
     width: 100px;
     justify-content: space-around !important;
 }
 
-.dgvIcone{
+.dgvIcone {
     width: 30px;
     cursor: pointer;
 }
@@ -84,7 +98,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
-  }
+}
   
 .modal-conteudo {
     background-color: #fefefe;
@@ -95,7 +109,7 @@
     max-width: 500px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
+}
   
 .fechar {
     color: #aaa;
@@ -103,67 +117,71 @@
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-  }
+}
   
 .fechar:hover,
 .fechar:focus {
-color: black;
-text-decoration: none;
-cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .form-grupo {
-margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .form-grupo label {
-display: block;
-margin-bottom: 5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .form-grupo input {
-width: 100%;
-padding: 8px;
-border: 1px solid #ddd;
-border-radius: 4px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .form-acoes {
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-adicionar,
 .btn-salvar,
 .btn-cancelar {
-padding: 10px 15px;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-transition: background-color 0.3s;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .btn-adicionar {
-background-color: #4CAF50;
-color: white;
-margin-bottom: 15px;
+    background-color: #4CAF50;
+    color: white;
+    width: 100px;
+    height: 600px;
+    margin-left: 19px;
+    margin-top: 150px;
+    margin-right: 150px;
 }
 
 .btn-salvar {
-background-color: #4CAF50;
-color: white;
+    background-color: #4CAF50;
+    color: white;
 }
 
 .btn-cancelar {
-background-color: #f44336;
-color: white;
+    background-color: #f44336;
+    color: white;
 }
 
 .btn-adicionar:hover,
 .btn-salvar:hover {
-background-color: #45a049;
+    background-color: #45a049;
 }
 
 .btn-cancelar:hover {
-background-color: #da190b;
+    background-color: #da190b;
 }
