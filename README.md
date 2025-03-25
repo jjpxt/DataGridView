@@ -40,9 +40,4 @@ Este é um sistema de registro de produtos simples e intuitivo, desenvolvido com
 
 
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
----
-
+## está hospedado em: https://jjpxt.github.io/DataGridView/
